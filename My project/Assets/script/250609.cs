@@ -2,17 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class text : MonoBehaviour
 {
-
-
-    int count;
-
-
-    void OnEnable()
-    {
-        count = 0;
-    }
+    // Start is called before the first frame update
     void Start()
     {
         int randomValue = Random.Range(1, 101);
@@ -29,18 +21,20 @@ public class NewBehaviourScript : MonoBehaviour
         {
             Debug.Log("'¸ð³ª'À» »Ì¾Ò´Ù!");
         }
-
-        else
-        {
-            Debug.Log("'Ä¡Ä¡'À» »Ì¾Ò´Ù");
-        }
     }
-     public void Gacha()
+
+
+
+
+
+
+    public void Gacha()
     {
         int number = 0;
         while (number < 10)
 
             number++;
+
     }
 
 
@@ -129,10 +123,17 @@ public class NewBehaviourScript : MonoBehaviour
         }
     }
 
+private List<string> characterList = new List<string> { "±è¹ÎÁö", "Á¤Áö¹Ì", "½Å°¡¿µ", "±è¼öÀ¯" }
 
-
-    void Update()
+void Start()
     {
-
+        string drawnCharacter + drawnCharacter();
+        Debug.Log("»ÌÈù Ä³¸¯ÅÍ:" + drawnCharacter);
     }
-}
+    public string DrawCharacter()
+    {
+        int randomIndex = Random.Range(0, characterList.Count);
+        return characterList[radomIndex];
+    }
+    // Update is called once per frame
+ 
