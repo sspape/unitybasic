@@ -122,18 +122,23 @@ public class text : MonoBehaviour
                 break;
         }
     }
+   
+    private List<string> characterList = new List<string> { "±è¹ÎÁö", "Á¤Áö¹Ì", "½Å°¡¿µ", "±è¼öÀ¯" };
 
-private List<string> characterList = new List<string> { "±è¹ÎÁö", "Á¤Áö¹Ì", "½Å°¡¿µ", "±è¼öÀ¯" }
+    public string drawnCharacter;
 
-void Start()
+   
+   public void texttypt()
     {
-        string drawnCharacter + drawnCharacter();
+        drawnCharacter = DrawCharacter();
         Debug.Log("»ÌÈù Ä³¸¯ÅÍ:" + drawnCharacter);
     }
     public string DrawCharacter()
     {
         int randomIndex = Random.Range(0, characterList.Count);
-        return characterList[radomIndex];
+        return characterList[randomIndex];
     }
     // Update is called once per frame
- 
+
+
+}
